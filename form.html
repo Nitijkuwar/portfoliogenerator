@@ -1,0 +1,59 @@
+<!-- form.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="form.css" />
+    <script src="form.js" defer></script>
+    <title>Portfolio Builder</title>
+</head>
+
+<body>
+    <section class="form-section">
+        <div class="form-container">
+            <h2 class="form-title">Fill Your Portfolio Information</h2>
+            <form id="portfolioForm" class="form">
+                <input type="text" id="name" placeholder="Enter Your Name" required />
+                <input type="text" id="role" placeholder="Your Role (e.g. Frontend Developer)" required />
+                <label for="profile">Choose your profile image</label>
+                <input type="file" id="profile" accept="image/*" required />
+
+                <label for="about-image">Choose your about image</label>
+                <input type="file" id="about-image" accept="image/*" required />
+                <textarea id="about-text" placeholder="Enter about yourself" rows="5" required></textarea>
+
+                <input type="text" id="about-name" placeholder="Enter your name" required />
+                <input type="email" id="about-email" placeholder="Enter your email" required />
+                <input type="number" id="about-phone" placeholder="Enter your phone number" required />
+                <input type="text" id="about-location" placeholder="Enter your location" required />
+
+                <label for="cv">Choose your CV</label>
+                <input type="file" id="cv" accept="application/pdf" required />
+
+                <label for="link">Paste your social media link</label>
+                <div id="social-links-wrapper">
+                    <input type="url" name="link" class="link-input" placeholder="https://example.com" required />
+                </div>
+                <button type="button" onclick="addSocialLink()" class="button-link">Add Another Link</button>
+
+                <div id="skills-wrapper" class="skills-wrapper">
+                    <div class="skill-entry">
+                        <input type="text" class="skills" placeholder="Skill (e.g. HTML)" required />
+                        <input type="number" class="levels" placeholder="Proficiency (%)" required />
+                    </div>
+
+                </div>
+                <button type="button" onclick="addSkills()" class="button-link">Add Another Skills</button>
+
+                <!-- <input type="text" class="skills" placeholder="Skill (e.g. HTML)" required />
+                <input type="number" class="levels" placeholder="Proficiency (%)" required /> -->
+
+                <button type="button" class="submit-btn" onclick="generatePortfolio()">Generate Portfolio</button>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
