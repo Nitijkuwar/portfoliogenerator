@@ -198,7 +198,6 @@ async function generatePortfolio() {
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            flex-wrap: wrap;
             padding: 60px;
         }
 
@@ -216,8 +215,8 @@ async function generatePortfolio() {
             padding-bottom: 12px;
         }
 
-        .profile-img {
-            border-radius: 50% / 35%;
+        .profile-image{
+            border-radius: 20px;
             width: 450px;
             height: 600px;
             object-fit: cover;
@@ -321,6 +320,7 @@ async function generatePortfolio() {
         .skills-section {
             max-width: 600px;
             margin: auto;
+            padding: 40px 0px;
         }
 
         .section-title {
@@ -358,31 +358,6 @@ async function generatePortfolio() {
             height: 100%;
             border-radius: 10px;
             transition: width 1s ease-in-out;
-        }
-
-        .html {
-            width: 90%;
-            background-color: orange;
-        }
-
-        .css {
-            width: 85%;
-            background-color: #2979ff;
-        }
-
-        .js {
-            width: 70%;
-            background-color: gold;
-        }
-
-        .react {
-            width: 60%;
-            background-color: #00bcd4;
-        }
-
-        .tailwind {
-            width: 75%;
-            background-color: #03a9f4;
         }
 
         .contact-section {
@@ -517,7 +492,7 @@ async function generatePortfolio() {
         }
 
         /* Responsive adjustments below 800px */
-        @media (max-width: 800px) {
+        @media (max-width: 700px) {
             .hero-section {
                 flex-direction: column;
                 padding: 30px 20px;
@@ -540,7 +515,7 @@ async function generatePortfolio() {
                 font-size: 2.5rem;
             }
 
-            .profile-img {
+            .profile-image {
                 width: 80%;
                 height: auto;
                 max-width: 350px;
@@ -640,12 +615,13 @@ async function generatePortfolio() {
         </div>
         <div class="navbar-toggle" id="mobile-menu"><i class="fa-solid fa-bars"></i></div>
 
-        <div class="navbar-links" id="nav-links">
-            <a href="/" class="nav-link">Home</a>
-            <a href="/about" class="nav-link">About</a>
-            <a href="/skills" class="nav-link">Skills</a>
-            <a href="/contact" class="nav-link">Contact</a>
-        </div>
+       <div class="navbar-links" id="nav-links">
+  <a href="#home" class="nav-link">Home</a>
+  <a href="#about" class="nav-link">About</a>
+  <a href="#skills" class="nav-link">Skills</a>
+  <a href="#contact" class="nav-link">Contact</a>
+</div>
+
     </nav>
     <section class="hero-section" id="home">
         <div class="intro">
@@ -732,6 +708,7 @@ async function generatePortfolio() {
     toggleBtn.addEventListener('click', () => {
         navLinks.classList.toggle('active');
     });
+    
 </script>
 
 </html>
